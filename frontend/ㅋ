@@ -9,4 +9,6 @@ firebase deploy
 
 
 
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+npm install -g firebase-tools
+firebase --version
