@@ -6,3 +6,7 @@ cd functions
 npm install
 cd ..
 firebase deploy
+
+
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
