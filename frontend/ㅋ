@@ -12,3 +12,6 @@ firebase deploy
 
 npm install -g firebase-tools
 firebase --version
+
+
+firebase init functions
