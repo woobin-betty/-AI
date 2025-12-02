@@ -682,3 +682,16 @@ const FullStackDemo = () => {
 };
 
 export default FullStackDemo;
+
+import { db, collection, addDoc } from "./firebase.js";
+
+// 저장 기능
+export async function saveAssignment(title, deadline, description) {
+  await addDoc(collection(db, "assignments"), {
+    title,
+    deadline,
+    description,
+  });
+
+  alert("저장 완료!");
+}
