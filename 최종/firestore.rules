@@ -1,0 +1,9 @@
+// firestore.rules
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /tasks/{taskId} {
+      allow read, write: if true; // 데모용: 실제 배포시 인증 필수로 변경하세요.
+    }
+  }
+}
