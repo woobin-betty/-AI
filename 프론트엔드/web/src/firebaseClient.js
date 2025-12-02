@@ -12,3 +12,17 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
+
+// Firestore 불러오기
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// Firestore 연결
+const db = getFirestore(app);
+
+// 다른 파일에서 쓰게 내보내기
+export { db, collection, addDoc, getDocs };
