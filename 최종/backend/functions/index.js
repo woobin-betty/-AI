@@ -124,3 +124,15 @@ exports.api = functions.https.onRequest(app);
 
 // 루트 엔드포인트도 지원 (간단 테스트)
 exports.generatePlan = functions.https.onRequest(app);
+
+<script type="module">
+  import { saveAssignment } from "./main.js";
+
+  window.saveData = () => {
+    const t = document.getElementById("title").value;
+    const d = document.getElementById("deadline").value;
+    const c = document.getElementById("desc").value;
+
+    saveAssignment(t, d, c);
+  };
+</script>
