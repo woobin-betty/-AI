@@ -6,7 +6,22 @@
     <title>Smart Schedule MVP</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <input id="title" placeholder="과제 제목 입력하기">
+<input id="deadline" placeholder="마감일 입력하기">
+<textarea id="desc" placeholder="설명 입력하기"></textarea>
+
+<button onclick="saveData()">저장하기</button>  
+<script type="module">
+  import { saveAssignment } from "./main.js";
+
+  window.saveData = () => {
+    const t = document.getElementById("title").value;
+    const d = document.getElementById("deadline").value;
+    const c = document.getElementById("desc").value;
+
+    saveAssignment(t, d, c);
+  };
+</script>
   </body>
 </html>
+
