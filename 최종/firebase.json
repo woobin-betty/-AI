@@ -22,26 +22,3 @@
   }
 }
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-
-const firebaseConfig = {
-  apiKey: "너의 apiKey",
-  authDomain: "너의 authDomain",
-  projectId: "너의 projectId",
-  storageBucket: "너의 storageBucket",
-  messagingSenderId: "너의 messagingSenderId",
-  appId: "너의 appId"
-};
-
-const app = initializeApp(firebaseConfig);
-
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-const db = getFirestore(app);
-
-export { db, collection, addDoc, getDocs };
